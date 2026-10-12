@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "SVN-Comic Sans MS";
+  src: url("/fonts/SVN-Comic%20Sans%20MS.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+img { display: block; }
+
+body {
+  background: #2796f7;
+  overflow-x: hidden;
+}
+
+.music {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 1440 / 3140;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #2796f7;
+  container-type: inline-size;
+}
+
+.music > * { position: absolute; }
+
+.looking-back-i-think,
+.one-of-my-least {
+  font-family: 'SVN-Comic Sans MS', 'Comic Sans MS', 'Comic Neue', cursive;
+  hyphens: none;
+}
+
+/* ---------- Hình đã nghiêng sẵn (khung bao đã tính lại) ---------- */
+.untitled-artwork-2-3 {
+  left: 19.746cqw;
+  top: 97.986cqw;
+  width: 85.492cqw;
+  height: 97.728cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-2-2 {
+  left: -2.994cqw;
+  top: 33.611cqw;
+  width: 81.059cqw;
+  height: 92.656cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-2-1 {
+  left: 21.25cqw;
+  top: 57.881cqw;
+  width: 2.767cqw;
+  height: 3.725cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-2-4 {
+  left: 12.986cqw;
+  top: 172.145cqw;
+  width: 30.941cqw;
+  height: 47.061cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-6-2-1 {
+  left: 8.194cqw;
+  top: 30.648cqw;
+  width: 27.29cqw;
+  height: 26.389cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-8-5 {
+  left: 41.956cqw;
+  top: 105.347cqw;
+  width: 13.048cqw;
+  height: 8.556cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-8-12 {
+  left: 63.804cqw;
+  top: 81.597cqw;
+  width: 15.033cqw;
+  height: 5.451cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-4-2-1 {
+  left: 80.277cqw;
+  top: 102.083cqw;
+  width: 15.417cqw;
+  height: 12.917cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-8-6 {
+  left: 6.95cqw;
+  top: 165.903cqw;
+  width: 15.07cqw;
+  height: 7.349cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-8-14 {
+  left: 61.186cqw;
+  top: 122.778cqw;
+  width: 15.07cqw;
+  height: 7.349cqw;
+  object-fit: contain;
+}
+
+.untitled-artwork-8-13 {
+  left: 54.708cqw;
+  top: 53.889cqw;
+  width: 15.018cqw;
+  height: 7.001cqw;
+  object-fit: contain;
+}
+
+/* ---------- Hình không xoay ---------- */
+.untitled-artwork-7-2-1 {
+  left: 50.139cqw;
+  top: 6.042cqw;
+  width: 49.861cqw;
+  height: 36.667cqw;
+  object-fit: cover;
+}
+
+.untitled-artwork-7-2-2 {
+  left: 0.278cqw;
+  top: 6.042cqw;
+  width: 49.861cqw;
+  height: 36.667cqw;
+  object-fit: cover;
+}
+
+.untitled-artwork-3-2-1 {
+  left: 58.958cqw;
+  top: 49.583cqw;
+  width: 34.514cqw;
+  height: 32.014cqw;
+  object-fit: cover;
+}
+
+.untitled-artwork-7-1 {
+  left: 3.542cqw;
+  top: 101.389cqw;
+  width: 17.292cqw;
+  height: 10.208cqw;
+  object-fit: cover;
+}
+
+.untitled-artwork-1-2-1 {
+  left: 78.681cqw;
+  top: 14.236cqw;
+  width: 16.528cqw;
+  height: 28.472cqw;
+  object-fit: cover;
+}
+
+.untitled-artwork-14-1 {
+  left: 69.167cqw;
+  top: 115.208cqw;
+  width: 27.361cqw;
+  height: 19.931cqw;
+  object-fit: cover;
+}
+
+.untitled-artwork-11-1 {
+  left: 36.528cqw;
+  top: 72.153cqw;
+  width: 22.431cqw;
+  height: 18.819cqw;
+  object-fit: cover;
+}
+
+/* ---------- Ảnh chính (img-*, giữ nguyên xoay) ---------- */
+.img-1 {
+  left: 33.819cqw;
+  top: 86.667cqw;
+  width: 21.389cqw;
+  height: 21.389cqw;
+  transform-origin: 0 0;
+  transform: rotate(8.27deg);
+  object-fit: cover;
+  outline: 0.347cqw solid #ffffff;
+  outline-offset: -0.347cqw;
+  box-shadow: 0 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+
+.img-2 {
+  left: 6.29cqw;
+  top: 47.05cqw;
+  width: 47.288cqw;
+  height: 31.885cqw;
+  object-fit: fill;
+  filter: drop-shadow(0 0.278cqw 0.278cqw rgba(0, 0, 0, 0.25));
+}
+
+.img-3 {
+  left: 8.194cqw;
+  top: 88.194cqw;
+  width: 21.389cqw;
+  height: 21.389cqw;
+  transform-origin: 0 0;
+  transform: rotate(-9.35deg);
+  object-fit: cover;
+  outline: 0.347cqw solid #ffffff;
+  outline-offset: -0.347cqw;
+  box-shadow: 0 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+
+.img-4 {
+  left: 52.708cqw;
+  top: 86.181cqw;
+  width: 18.819cqw;
+  height: 18.819cqw;
+  transform-origin: 0 0;
+  transform: rotate(-6.93deg);
+  object-fit: cover;
+  outline: 0.347cqw solid #ffffff;
+  outline-offset: -0.347cqw;
+  box-shadow: 0.278cqw 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+
+.img-5 {
+  left: 71.319cqw;
+  top: 91.875cqw;
+  width: 16.667cqw;
+  height: 16.667cqw;
+  object-fit: cover;
+  outline: 0.278cqw solid #ffffff;
+  outline-offset: -0.278cqw;
+  box-shadow: 0 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+
+.img-2866-1 {
+  left: 49.375cqw;
+  top: 57.083cqw;
+  width: 13.819cqw;
+  height: 16.736cqw;
+  object-fit: cover;
+  outline: 0.417cqw solid #ffffff;
+  outline-offset: -0.417cqw;
+  box-shadow: 0 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Chữ ---------- */
+.music-2 {
+  left: 3.125cqw;
+  top: 14.097cqw;
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 18.681cqw;
+  font-weight: 400;
+  line-height: 17.569cqw;
+  color: #fdfdb4;
+  white-space: nowrap;
+}
+
+.looking-back-i-think {
+  left: 6.389cqw;
+  top: 113.75cqw;
+  width: 51.597cqw;
+  height: 9.861cqw;
+  transform-origin: 0 0;
+  transform: rotate(5.13deg);
+  font-size: 1.667cqw;
+  font-weight: 400;
+  line-height: 94.062%;
+  color: #fdfdb4;
+  text-align: justify;
+}
+
+.one-of-my-least {
+  left: 36.181cqw;
+  top: 39.583cqw;
+  width: 45.278cqw;
+  height: 10.278cqw;
+  transform-origin: 0 0;
+  transform: rotate(-1.77deg);
+  font-size: 1.667cqw;
+  font-weight: 400;
+  line-height: 94.062%;
+  color: #fdfdb4;
+  text-align: justify;
+}
+
+/* ---------- Khung vàng giữ chỗ ảnh ---------- */
+.box-2 {
+  left: 8.889cqw;
+  top: 131.806cqw;
+  width: 63.681cqw;
+  height: 38.889cqw;
+  transform-origin: 0 0;
+  transform: rotate(-5.94deg);
+  object-fit: cover;
+  background-color: #fdfdb4;
+}

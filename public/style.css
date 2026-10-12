@@ -1,0 +1,152 @@
+:root {
+  --bg: #f5ecde;
+  --pink: #ff66c4;
+  --green: #44c752;
+  --yellow: #fdfdb4;
+  --purple: #756fe4;
+  --orange: #ff8a2a;
+  --frame: 1440px;   /* khung thiết kế mặc định */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.hero {
+  width: 100%;
+  max-width: var(--frame);
+  margin: 0 auto;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== SCENE ===== */
+.scene {
+  --k: 1;               /* hệ số phóng chữ nhãn theo breakpoint */
+  --title: 8.89cqw;     /* 128px / 1440px */
+  position: relative;
+  width: 100%;
+  max-width: var(--frame);
+  margin: 0 auto;
+  container-type: inline-size; /* 1cqw = 1% chiều rộng scene */
+}
+.scene__bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== TIÊU ĐỀ ===== */
+.title {
+  position: absolute;
+  font-family: "iCielBC Cubano", "Lilita One", Impact, sans-serif;
+  font-weight: 400;
+  font-size: var(--title);
+  line-height: 78.385%;
+  pointer-events: none;
+}
+.title--pink  { color: #FF66C4; left: 14%; top: 6.5%; }
+.title--green { color: var(--green); left: 28%; top: 65%; }
+
+/* ===== NHÃN (Amatic SC 700) — cỡ chữ tính trên khung 1440px ===== */
+.label {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(var(--r, 0deg));
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  line-height: 94.062%;
+  text-align: right;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform .25s cubic-bezier(.3, 1.6, .5, 1);
+}
+.label:hover {
+  transform: translate(-50%, -50%) rotate(var(--r, 0deg)) scale(1.18);
+}
+
+.label--about {
+  left: 11%; top: 32.5%; --r: -8deg;
+  color: #FDFDB4; font-size: calc(3.67cqw * var(--k));   /* 52.837px */
+}
+.label--community {
+  left: 46.2%; top: 25.2%;
+  color: #FFF; font-size: calc(3.82cqw * var(--k));      /* 54.985px */
+}
+.label--epilouge {
+  left: 69.3%; top: 23.5%; --r: 3deg;
+  color: #756FE4; font-size: calc(2.76cqw * var(--k));   /* 39.69px */
+}
+.label--music {
+  left: 91.3%; top: 58%; --r: -6deg;
+  color: #FDFDB4; font-size: calc(2.76cqw * var(--k));
+}
+.label--academics {
+  left: 85.8%; top: 68%; --r: -14deg;
+  color: var(--orange); font-size: calc(2.76cqw * var(--k));
+}
+.label--gallery {
+  left: 16.9%; top: 81.5%; --r: 20deg;
+  color: #FDFDB4; font-size: calc(2.76cqw * var(--k));
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed; left: 50%; bottom: 28px;
+  transform: translate(-50%, 30px);
+  background: #2a2a9a; color: #fff;
+  padding: 10px 22px; border-radius: 999px;
+  font-family: "Amatic SC", cursive; font-size: 28px;
+  opacity: 0; pointer-events: none;
+  transition: .3s; z-index: 99;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* =====================================================
+   RESPONSIVE
+   ≥ 1440px: khung cố định 1440px, căn giữa.
+   Dưới 1440px: chữ co giãn theo ảnh (cqw), mỗi mốc chỉ
+   tăng nhẹ cỡ chữ để không quá nhỏ trên màn hình bé.
+   ===================================================== */
+
+/* ≤ 1439px — bắt đầu co giãn, cỡ chữ giữ nguyên tỉ lệ thiết kế */
+@media (max-width: 1439px) {
+  .scene { --k: 1; }
+}
+
+/* ≤ 1200px */
+@media (max-width: 1200px) {
+  .scene { --k: 1.05; }
+  .label--epilouge { top: 23%; }
+}
+
+/* ≤ 1024px */
+@media (max-width: 1024px) {
+  .scene { --k: 1.15; }
+  .label:hover { transform: translate(-50%, -50%) rotate(var(--r, 0deg)); } /* tablet: bỏ hover */
+  .label:active { transform: translate(-50%, -50%) rotate(var(--r, 0deg)) scale(1.12); }
+}
+
+/* ≤ 768px */
+@media (max-width: 768px) {
+  .scene { --k: 1.25; --title: 9.2cqw; }
+  .title--pink  { left: 12%; }
+  .title--green { left: 26%; }
+  .toast { font-size: 24px; bottom: 18px; }
+}
+
+/* ≤ 480px */
+@media (max-width: 480px) {
+  .scene { --k: 1.35; --title: 9.8cqw; }
+  .title--pink  { left: 10%; top: 6%; }
+  .title--green { left: 24%; }
+  .label { text-shadow: 0 0 2px rgba(0, 0, 0, .15); }
+  .toast { font-size: 20px; padding: 8px 16px; }
+}

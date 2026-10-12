@@ -1,0 +1,140 @@
+:root {
+  --bg: #ffcf68;
+  --frame: 1440px;
+}
+
+@font-face {
+  font-family: "SVN-Comic Sans MS";
+  src:url("/fonts/SVN-Comic-Sans-MS.ttf")   format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+/* ===== KHUNG TRANG ===== */
+.about {
+  position: relative;
+  width: 100%;
+  max-width: var(--frame);
+  margin: 0 auto;
+  container-type: inline-size;
+}
+.about__bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== VỊ TRÍ NAV TRÊN TRANG NÀY (kiểu dáng ở nav.css) ===== */
+.about .nav {
+  position: absolute;
+  inset: 2% 0 auto 0;
+  --nav-size: 1.8cqw;
+  --nav-gap: 3.2cqw;
+}
+
+/* ===== CHỮ — kiểu chung cho cả 3 đoạn ===== */
+.p {
+  color: #2796F7;
+  text-align: justify;
+  font-family: "SVN-Comic Sans MS", "Comic Sans MS", "Comic Neue", cursive;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.062%;
+}
+
+/* ===== MẶC ĐỊNH (màn ≤ 1024px): đoạn văn nằm dưới ảnh ===== */
+.copy {
+  padding: 28px 6% 56px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.p {
+  font-size: 22px;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+.p1 { transform: rotate(-1.5deg); }
+.p3 { transform: rotate(1.5deg); text-align: left; }
+
+/* ===== DESKTOP (> 1024px): chữ nằm trên ảnh nền, đúng thông số thiết kế ===== */
+@media (min-width: 1025px) {
+  .copy {
+    position: absolute;
+    inset: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+  }
+
+  .p {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(var(--r));   /* xoay quanh tâm khung */
+    font-size: 1.667cqw;           /* 24px */
+    line-height: 94.062%;
+    margin: 0;
+    pointer-events: auto;
+  }
+
+  .p1 {
+    left: 16.5%; top: 47%;
+    width: 23.889cqw;
+    height: auto;
+    --r: 2.803deg;
+  }
+
+  .p2 {
+    left: 32.8%; top: 64.6%;
+    width: 34.2cqw;
+    height: auto;
+    --r: -8.251deg;
+  }
+
+  .p3 {
+    left: 30%; top: 87%;
+    width: 17cqw;
+    height: auto;
+    --r: 19deg;
+    text-align: justify;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+/* ≤ 1439px */
+@media (max-width: 1439px) {
+  .about .nav { --nav-size: 1.8cqw; }
+}
+
+/* ≤ 1200px */
+@media (max-width: 1200px) {
+  .about .nav { --nav-size: 1.95cqw; --nav-gap: 2.6cqw; }
+}
+
+/* ≤ 1024px */
+@media (max-width: 1024px) {
+  .about .nav { --nav-size: 2.2cqw; --nav-gap: 2.2cqw; --nav-pad-x: 4%; }
+  .p1, .p2, .p3 { transform: none; position: static; width: 100%; text-align: justify; }
+}
+
+/* ≤ 768px */
+@media (max-width: 768px) {
+  .about .nav { inset: 8px 0 auto 0; }
+  .p { font-size: 20px; }
+}
+
+/* ≤ 480px */
+@media (max-width: 480px) {
+  .copy { padding: 20px 20px 44px; }
+  .p { font-size: 18px; margin-bottom: 16px; }
+}

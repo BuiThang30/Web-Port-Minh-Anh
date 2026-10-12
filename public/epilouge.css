@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "SVN-Comic Sans MS";
+  src: url("/fonts/SVN-Comic%20Sans%20MS.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+img { display: block; }
+
+body { background: #af1536; overflow-x: hidden; }
+
+.epilogue {
+  --body: max(1.667cqw, 9px);
+
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 1440 / 1125;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #af1536;
+  container-type: inline-size;
+}
+
+.epilogue > * { position: absolute; }
+
+.and-that-s-a {
+  left: 3.611cqw; top: 16.25cqw;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 8.889cqw; font-weight: 400; line-height: 0.94;
+  color: #fdfdb4; white-space: nowrap;
+}
+
+.thank-you-for-stopping {
+  left: 3.611cqw; top: 35.347cqw; width: 39.514cqw; height: 19.514cqw;
+  font-family: "SVN-Comic Sans MS", "Comic Sans MS", "Comic Neue", cursive;
+  font-size: var(--body); font-weight: 400; line-height: 0.96;
+  color: #ffb5ca; text-align: justify; hyphens: none;
+}
+
+.mail {
+  color: inherit;
+  text-decoration: underline;
+}
+.mail:hover { color: #fdfdb4; }
+
+.untitled-artwork-10-1 {
+  left: 45.208cqw; top: 30.139cqw; width: 15.347cqw; height: 16.319cqw;
+  object-fit: cover;
+}
+
+@media (max-width: 1439px) { .epilogue { --body: max(1.7cqw, 9px); } }
+@media (max-width: 1199px) { .epilogue { --body: max(1.78cqw, 10px); } }
+@media (max-width: 1023px) { .epilogue { --body: max(1.9cqw, 10px); } }
+@media (max-width: 767px)  { .epilogue { --body: max(2.05cqw, 10px); } }
+@media (max-width: 479px)  { .epilogue { --body: max(2.2cqw, 9px); } }

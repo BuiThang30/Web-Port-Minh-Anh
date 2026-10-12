@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "SVN-Comic Sans MS";
+  src: url("/fonts/SVN-Comic%20Sans%20MS.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+img { display: block; }
+
+body { background: #b9a4ee; overflow-x: hidden; }
+
+.community-page {
+  --body: max(1.667cqw, 9px);
+
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 1440 / 3172;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #b9a4ee;
+  container-type: inline-size;
+}
+
+.community-page > * { position: absolute; }
+
+/* ---------- Chữ ---------- */
+.community-involvement {
+  left: 5.486cqw; top: 11.528cqw;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 8.889cqw; font-weight: 700; line-height: 0.94;
+  color: #fdfdb4; white-space: nowrap;
+}
+
+.no-one-wanders-through, .cap {
+  font-family: "SVN-Comic Sans MS", "Comic Sans MS", "Comic Neue", cursive;
+  font-size: var(--body);
+  font-weight: 400;
+  line-height: 0.96;
+  color: #fdfdb4;
+  text-align: justify;
+  hyphens: none;
+  transform-origin: 0 0;
+}
+.cap.dark { color: #1e1e1e; }
+
+.no-one-wanders-through {
+  left: 47.292cqw; top: 11.944cqw; width: 39.514cqw; height: 19.514cqw;
+  transform: rotate(5.15deg);
+}
+
+.aria-project-2026           { left: 12.917cqw; top: 89.167cqw;  width: 13.958cqw; height: 1.806cqw; transform: rotate(5.15deg); }
+.class-representative-for-3  { left: 68.75cqw;  top: 38.333cqw;  width: 13.958cqw; height: 1.806cqw; transform: rotate(5.15deg); }
+.june-2025-inspiration-day   { left: 32.153cqw; top: 67.917cqw;  width: 19.514cqw; height: 4.097cqw; transform: rotate(5.15deg); }
+.october-2025-group-leader   { left: 15.486cqw; top: 33.75cqw;   width: 13.958cqw; height: 5.347cqw; transform: rotate(5.15deg); }
+.september-2024-donation-and { left: 58.889cqw; top: 110.417cqw; width: 24.653cqw; height: 5.347cqw; transform: rotate(-4.95deg); }
+.july-2025-finance-team      { left: 45.903cqw; top: 88.403cqw;  width: 11.389cqw; height: 5.347cqw; transform: rotate(-4.95deg); }
+.halloween-charity-event-for { left: 20.486cqw; top: 112.014cqw; width: 11.389cqw; height: 5.347cqw; transform: rotate(-4.95deg); }
+.co-organize-moc-workshop    { left: 60.694cqw; top: 143.681cqw; width: 12.361cqw; height: 5.347cqw; transform: rotate(-4.95deg); }
+.june-2026-volunteer-at      { left: 68.958cqw; top: 154.028cqw; width: 12.361cqw; height: 5.347cqw; transform: rotate(-4.95deg); }
+
+/* ---------- Ảnh chụp có viền trắng (giữ xoay) ---------- */
+.photo {
+  object-fit: cover;
+  transform-origin: 0 0;
+  outline: 0.417cqw solid #fff;
+  outline-offset: -0.417cqw;
+  box-shadow: 0.278cqw 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+
+.sept-2024  { left: 56.875cqw; top: 92.292cqw;  width: 26.806cqw; height: 17.917cqw; transform: rotate(-4.09deg); box-shadow: 0 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25); }
+.img-1      { left: 14.167cqw; top: 31.458cqw;  width: 21.389cqw; height: 21.389cqw; transform: rotate(9.27deg); outline-width: 0.347cqw; outline-offset: -0.347cqw; }
+.june-2025  { left: 28.403cqw; top: 51.667cqw;  width: 24.028cqw; height: 16.181cqw; transform: none; }
+.class-rep  { left: 46.389cqw; top: 41.25cqw;   width: 20.556cqw; height: 13.681cqw; transform: rotate(-8.21deg); }
+.sept-2025  { left: 65.972cqw; top: 48.333cqw;  width: 24.444cqw; height: 16.458cqw; transform: rotate(7.45deg); }
+.july-2026  { left: 14.722cqw; top: 69.306cqw;  width: 29.028cqw; height: 22.917cqw; transform: rotate(10.04deg); }
+.july-2025  { left: 33.264cqw; top: 88.611cqw;  width: 27.222cqw; height: 18.194cqw; transform: rotate(-5.44deg); }
+.dec-2024   { left: 15.625cqw; top: 108.264cqw; width: 33.611cqw; height: 22.431cqw; transform: rotate(6.72deg); }
+.june-2026  { left: 18.403cqw; top: 153.75cqw;  width: 33.611cqw; height: 25.208cqw; transform: rotate(-10.27deg); }
+.moc-workshop { left: 41.597cqw; top: 129.792cqw; width: 33.75cqw; height: 22.5cqw; transform: none; }
+.img-2      { left: 47.639cqw; top: 166.944cqw; width: 21.389cqw; height: 21.389cqw; transform: rotate(-15.32deg); }
+
+/* ---------- Hình trang trí (đã nghiêng sẵn, khung bao đã tính lại) ---------- */
+.untitled-artwork-2-3 {
+  left: 24.329cqw; top: 129.097cqw; width: 85.492cqw; height: 97.728cqw;
+  object-fit: contain;
+  transform: scale(0.82);
+}
+.untitled-artwork-2-1 {
+  left: -15.619cqw; top: 76.806cqw; width: 81.059cqw; height: 92.656cqw;
+  object-fit: contain;
+  transform: scale(0.95);
+}
+.untitled-artwork-16-1  { left: 58.903cqw; top: 112.014cqw; width: 36.961cqw; height: 26.587cqw; object-fit: contain; }
+.untitled-artwork-4-2-2 { left: 2.916cqw;  top: 131.319cqw; width: 28.056cqw; height: 24.375cqw; object-fit: contain; }
+.untitled-artwork-6-2-2 { left: 82.431cqw; top: 94.445cqw;  width: 19.097cqw; height: 18.333cqw; object-fit: contain; }
+
+/* ---------- Hình không xoay ---------- */
+.untitled-artwork-3-2-1 { left: 43.472cqw; top: 59.792cqw; width: 34.514cqw; height: 32.014cqw; object-fit: cover; }
+.untitled-artwork-15-1  { left: 0cqw; top: 44.597cqw; width: 37.153cqw; height: 46.111cqw; object-fit: contain; transform: scale(0.82);}
+.untitled-artwork-7-2   { left: 50.972cqw; top: 166.944cqw; width: 50.556cqw; height: 29.861cqw; object-fit: cover; }
+
+.img-3 { left: 57.431cqw; top: 156.319cqw; width: 10.764cqw; height: 4.514cqw; }
+.img-4 { left: 57.292cqw; top: 159.444cqw; width: 1.458cqw;  height: 1.597cqw; }
+
+/* ---------- Băng dính (đã nghiêng sẵn) ---------- */
+.tape { object-fit: contain; }
+.t-8-9  { left: 41.597cqw; top: 35.548cqw;  width: 11.598cqw; height: 12.79cqw; }
+.t-8-10 { left: 28.855cqw; top: 103.611cqw; width: 14.612cqw; height: 6.067cqw; }
+.t-8-12 { left: 76.998cqw; top: 146.319cqw; width: 15.033cqw; height: 5.451cqw; }
+.t-8-13 { left: 18.387cqw; top: 175.278cqw; width: 15.033cqw; height: 5.451cqw; }
+
+/* =====================================================
+   RESPONSIVE — toàn trang co theo chiều rộng, chỉ nâng cỡ chữ
+   ===================================================== */
+@media (max-width: 1439px) { .community-page { --body: max(1.7cqw, 9px); } }
+@media (max-width: 1199px) { .community-page { --body: max(1.78cqw, 10px); } }
+@media (max-width: 1023px) { .community-page { --body: max(1.9cqw, 10px); } }
+@media (max-width: 767px)  { .community-page { --body: max(2.05cqw, 10px); } }
+@media (max-width: 479px)  { .community-page { --body: max(2.2cqw, 9px); } }

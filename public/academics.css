@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "SVN-Comic Sans MS";
+  src: url("/fonts/SVN-Comic%20Sans%20MS.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+img { display: block; }
+a { color: inherit; }
+
+body { background: #fefeb4; overflow-x: hidden; }
+
+.academic {
+  --body: max(1.667cqw, 9px);
+  --label: max(1.944cqw, 10px);
+  --small: max(1.389cqw, 8px);
+
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 1440 / 4695;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fefeb4;
+  container-type: inline-size;
+}
+
+.academic > * { position: absolute; }
+
+/* ---------- Chữ ---------- */
+.some-of-my-favorite, .research-is-like-a, .for-a-little-while,
+.and-i-also-wrote, .july-2025-research-field, .july-2025-interview-with,
+.august-2025-intern-imhens, .inside-the-suitcase-how, .click-here, .click-here-2 {
+  font-family: "SVN-Comic Sans MS", "Comic Sans MS", "Comic Neue", cursive;
+  font-weight: 400;
+  line-height: 0.96;
+  text-align: justify;
+  hyphens: none;
+}
+
+.academics, .part-1-competitions, .part-2-research, .part-3-internship,
+.fdb-talent-2026, .hssic-2026-top-15, .vsic-2026, .wico-2026 {
+  font-family: "Amatic SC", sans-serif;
+  white-space: nowrap;
+}
+
+.academics {
+  left: 5.486cqw; top: 11.528cqw;
+  font-size: 17.778cqw; font-weight: 400; line-height: 0.94;
+  color: #ff6591;
+}
+.part-1-competitions, .part-2-research, .part-3-internship {
+  font-size: 4.444cqw; font-weight: 700; line-height: 0.94;
+}
+.part-1-competitions { left: 45.625cqw; top: 49.792cqw; color: #ff6591; }
+.part-2-research     { left: 9.306cqw;  top: 152.222cqw; font-size: 5.764cqw; color: #2796f7; }
+.part-3-internship   { left: 45.625cqw; top: 263.333cqw; color: #2796f7; }
+
+.some-of-my-favorite, .research-is-like-a, .for-a-little-while {
+  width: 39.514cqw;
+  font-size: var(--body);
+}
+.some-of-my-favorite { left: 45.625cqw; top: 54.583cqw;  height: 13.125cqw; color: #2796f7; }
+.research-is-like-a  { left: 10.069cqw; top: 161.319cqw; height: 9.931cqw;  color: #ff6591; }
+.for-a-little-while  { left: 45.625cqw; top: 269.236cqw; height: 9.931cqw;  color: #ff6591; }
+
+.july-2025-research-field, .july-2025-interview-with, .august-2025-intern-imhens {
+  font-size: var(--body); color: #2796f7;
+}
+.july-2025-research-field  { left: 70.417cqw; top: 244.514cqw; width: 22.778cqw; height: 8.472cqw; }
+.july-2025-interview-with  { left: 37.5cqw;   top: 248.194cqw; width: 19.375cqw; height: 5cqw; }
+.august-2025-intern-imhens { left: 5.347cqw;  top: 248.194cqw; width: 19.931cqw; height: 4.514cqw; }
+
+.inside-the-suitcase-how {
+  left: 52.431cqw; top: 196.389cqw; width: 34.444cqw; height: 7.014cqw;
+  font-size: var(--small); color: #ff6591; text-align: left;
+}
+.and-i-also-wrote {
+  left: 12.847cqw; top: 201.528cqw; width: 39.514cqw; height: 1.875cqw;
+  transform-origin: 0 0; transform: rotate(-3.74deg);
+  font-size: var(--body); color: #ff6591; text-align: left; white-space: nowrap;
+}
+.click-here, .click-here-2 {
+  font-size: var(--label); text-decoration: underline; color: #ff6591;
+  white-space: nowrap; text-align: left;
+}
+.click-here   { left: 10.278cqw; top: 192.153cqw; }
+.click-here-2 { left: 13.333cqw; top: 203.958cqw; transform-origin: 0 0; transform: rotate(-3.74deg); }
+
+/* ---------- Nền ---------- */
+.box-1 { left: 0; top: 146.389cqw; width: 100cqw; height: 178.611cqw; background-color: #72f9c3; }
+.box-2 {
+  left: -5.208cqw; top: 220.139cqw; width: 107.847cqw; height: 46.597cqw;
+  transform-origin: 0 0; transform: rotate(-5.94deg); background-color: #fdfdb4;
+}
+.box-3 {
+  left: 3.056cqw; top: 43.611cqw; width: 75.833cqw; height: 51.319cqw;
+  transform-origin: 0 0; transform: rotate(-9.92deg);
+  background-color: #a9db5b; box-shadow: 0.278cqw 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+.box-4 {
+  left: 23.889cqw; top: 56.458cqw; width: 75.833cqw; height: 51.319cqw;
+  transform-origin: 0 0; transform: rotate(12.29deg);
+  background-color: #ffd940; box-shadow: 0.278cqw 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+.box-9 {
+  left: 3.333cqw; top: 281.389cqw; width: 42.778cqw; height: 26.111cqw;
+  transform-origin: 0 0; transform: rotate(-5.94deg); background-color: #fdfdb4;
+}
+
+/* ---------- Hình trang trí (đã nghiêng / lật sẵn, không xoay thêm) ---------- */
+.untitled-artwork-13-1 { left: 49.306cqw; top: 18.542cqw; width: 46.736cqw; height: 32.569cqw; object-fit: cover; }
+.untitled-artwork-1-3-1 { left: -3.347cqw; top: 28.528cqw; width: 49.44cqw; height: 35.75cqw; object-fit: cover; }
+
+.untitled-artwork-2-2-2 { left: 6.181cqw;  top: 32.083cqw;  width: 16.667cqw; height: 11.042cqw; object-fit: contain; }
+.untitled-artwork-2-2-1 { left: 76.458cqw; top: 113.611cqw; width: 18.75cqw;  height: 12.292cqw; object-fit: contain; }
+
+.untitled-artwork-3-3 {
+  left: 37.381cqw; top: 104.653cqw; width: 42.325cqw; height: 55.76cqw;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* ---------- Ảnh chụp có viền trắng (giữ xoay) ---------- */
+.img-1, .img-2, .img-3, .img-4, .img-5, .may-1, .may-2, .may-3,
+.wico-2026-1-1, .img-6, .img-7, .img-8 {
+  object-fit: cover;
+  box-shadow: 0 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+
+.box-6, .box-7, .box-8 { transform-origin: 0 0; }
+.box-6 > *, .box-7 > *, .box-8 > * { position: absolute; }
+.img-6, .img-7, .img-8 {
+  left: 0; top: 0; height: 100%; width: 100%;
+  outline: 0.278cqw solid #fff; outline-offset: -0.278cqw;
+  box-shadow: 0.278cqw 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+
+.box-6 { left: 8.611cqw;  top: 65.556cqw; width: 25.903cqw; height: 19.792cqw; transform: rotate(-5.79deg); }
+.box-7 { left: 33.75cqw;  top: 71.042cqw; width: 30cqw;     height: 19.792cqw; transform: rotate(6.67deg); }
+.box-8 { left: 60.972cqw; top: 71.042cqw; width: 16.389cqw; height: 19.792cqw; transform: rotate(-7.38deg); }
+
+.fdb-talent-2026   { left: 0.556cqw; top: 0.556cqw; font-size: var(--label); font-weight: 700; line-height: 0.93; color: #fdfdb4; }
+.hssic-2026-top-15 { left: 1.111cqw; top: 1.042cqw; font-size: var(--label); font-weight: 700; line-height: 0.93; color: #ff6591; }
+.vsic-2026         { left: 0.694cqw; top: 17.361cqw; font-size: var(--label); font-weight: 700; line-height: 0.93; color: #fdfdb4; }
+
+.wico-2026-1-1 {
+  left: 77.569cqw; top: 75.278cqw; width: 19.583cqw; height: 20.625cqw;
+  transform-origin: 0 0; transform: rotate(7.99deg);
+  outline: 0.417cqw solid #fff; outline-offset: -0.417cqw;
+}
+.wico-2026 {
+  left: 86.597cqw; top: 95.069cqw;
+  transform-origin: 0 0; transform: rotate(6.58deg);
+  font-size: var(--label); font-weight: 700; line-height: 0.93; color: #fdfdb4;
+}
+
+.may-1 {
+  left: 7.917cqw; top: 98.056cqw; width: 46.806cqw; height: 35.139cqw;
+  transform-origin: 0 0; transform: rotate(-3.68deg);
+  outline: 0.556cqw solid #fff; outline-offset: -0.556cqw;
+}
+.may-2, .may-3 {
+  width: 27.847cqw; height: 20.903cqw; transform-origin: 0 0;
+  outline: 0.556cqw solid #fff; outline-offset: -0.556cqw;
+  box-shadow: 0.278cqw 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+.may-2 { left: 55cqw;     top: 277.5cqw;   transform: rotate(7.7deg); }
+.may-3 { left: 59.931cqw; top: 300.625cqw; transform: rotate(-11.88deg); }
+
+.img-1 {
+  left: 10.694cqw; top: 172.153cqw; width: 33.125cqw; height: 18.542cqw;
+  transform-origin: 0 0; transform: rotate(4.29deg); outline: 0.278cqw solid #fff;
+}
+.img-2 {
+  left: 42.222cqw; top: 176.111cqw; width: 35.486cqw; height: 19.861cqw;
+  transform-origin: 0 0; transform: rotate(-7.82deg);
+  outline: 0.278cqw solid #fff; outline-offset: -0.278cqw;
+}
+.img-3, .img-4, .img-5 {
+  height: 23.75cqw; transform-origin: 0 0;
+  outline: 0.417cqw solid #fff; outline-offset: -0.417cqw;
+  box-shadow: 0.278cqw 0.278cqw 0.278cqw 0 rgba(0, 0, 0, 0.25);
+}
+.img-3 { left: 3.958cqw;  top: 223.403cqw; width: 21.389cqw; transform: rotate(-6.52deg); }
+.img-4 { left: 28.75cqw;  top: 220.903cqw; width: 31.111cqw; transform: rotate(4.86deg); }
+.img-5 { left: 57.778cqw; top: 220.972cqw; width: 31.111cqw; transform: rotate(-6.93deg); }
+
+/* ---------- Băng dính (đã nghiêng sẵn, khung bao đã tính lại) ---------- */
+.tape { object-fit: contain; }
+.t-8-9    { left: 26.842cqw; top: 60.764cqw;  width: 14.612cqw; height: 6.067cqw; }
+.t-8-10   { left: 4.134cqw;  top: 82.083cqw;  width: 14.612cqw; height: 6.067cqw; }
+.t-8-12   { left: 41.859cqw; top: 69.861cqw;  width: 15.033cqw; height: 5.451cqw; }
+.t-8-13   { left: 69.689cqw; top: 66.944cqw;  width: 14.612cqw; height: 6.067cqw; }
+.t-8-14   { left: 44.898cqw; top: 92.361cqw;  width: 14.612cqw; height: 6.067cqw; }
+.t-8-15   { left: 4.498cqw;  top: 130.764cqw; width: 15.033cqw; height: 5.451cqw; }
+.t-8-9-2  { left: 80.407cqw; top: 214.514cqw; width: 15.674cqw; height: 6.5cqw; }
+.t-8-6    { left: 18.455cqw; top: 217.708cqw; width: 10.864cqw; height: 5.278cqw; }
+.t-8-16   { left: 2.037cqw;  top: 304.306cqw; width: 10.142cqw; height: 4.94cqw; }
+.t-8-17   { left: 38.704cqw; top: 275.069cqw; width: 10.142cqw; height: 4.94cqw; }
+.t-8-18   { left: 76.93cqw;  top: 278.611cqw; width: 8.506cqw;  height: 5.075cqw; }
+.t-8-19   { left: 48.783cqw; top: 296.25cqw;  width: 8.85cqw;   height: 4.838cqw; }
+.t-8-20   { left: 81.53cqw;  top: 294.028cqw; width: 8.653cqw;  height: 2.407cqw; }
+.t-8-21   { left: 60.938cqw; top: 320.139cqw; width: 8.783cqw;  height: 2.035cqw; }
+
+/* =====================================================
+   RESPONSIVE — toàn trang co theo chiều rộng, chỉ nâng cỡ chữ
+   ===================================================== */
+@media (max-width: 1439px) {
+  .academic { --body: max(1.7cqw, 9px);  --label: max(1.97cqw, 10px); --small: max(1.42cqw, 8px); }
+}
+@media (max-width: 1199px) {
+  .academic { --body: max(1.78cqw, 10px); --label: max(2.05cqw, 11px); --small: max(1.5cqw, 9px); }
+}
+@media (max-width: 1023px) {
+  .academic { --body: max(1.9cqw, 10px);  --label: max(2.2cqw, 11px);  --small: max(1.6cqw, 9px); }
+}
+@media (max-width: 767px) {
+  .academic { --body: max(2.05cqw, 10px); --label: max(2.4cqw, 11px);  --small: max(1.75cqw, 9px); }
+  .some-of-my-favorite, .research-is-like-a, .for-a-little-while { line-height: 1; }
+}
+@media (max-width: 479px) {
+  .academic { --body: max(2.2cqw, 9px);   --label: max(2.6cqw, 10px);  --small: max(1.9cqw, 8px); }
+  .some-of-my-favorite, .research-is-like-a, .for-a-little-while { line-height: 1.02; }
+}
