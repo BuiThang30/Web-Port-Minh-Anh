@@ -10,24 +10,41 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html {
+  overflow-x: hidden;
+  scrollbar-gutter: stable;   /* giữ chỗ thanh cuộn → không bị nhảy bố cục khi mở khóa */
+}
+/* khóa cuộn cho tới khi bấm GIF */
+html.is-locked { overflow: hidden; }
+
 body {
   background: var(--bg);
-  overflow-x: hidden;
 }
 
 /* ===== HERO ===== */
 .hero {
   width: 100%;
   max-width: var(--frame);
+  height: 100vh;            /* fallback */
+  height: 100svh;           /* vừa đúng 1 màn hình, kể cả mobile có thanh địa chỉ */
   margin: 0 auto;
+  cursor: pointer;
 }
 .hero img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;      /* hiện trọn GIF. Muốn tràn kín màn hình thì đổi thành cover */
+  object-position: center;
 }
+.hero:focus-visible { outline: 3px dashed var(--purple); outline-offset: -6px; }
 
 /* ===== SCENE ===== */
+/* Phần dưới được dựng sẵn từ đầu (ảnh đã vẽ xong) nhưng ẩn + khóa cuộn.
+   Lúc bấm chỉ việc bật hiển thị rồi cuộn → không còn nhịp khựng. */
+.scene:not(.is-open) { visibility: hidden; }
+.scene:not(.is-open) .label { animation-play-state: paused; }
+
 .scene {
   --k: 1;               /* hệ số phóng chữ nhãn theo breakpoint */
   --title: 8.89cqw;     /* 128px / 1440px */
@@ -57,6 +74,7 @@ body {
 
 /* ===== NHÃN (Amatic SC 700) — cỡ chữ tính trên khung 1440px ===== */
 .label {
+  --glow: #ff66c4;
   position: absolute;
   transform: translate(-50%, -50%) rotate(var(--r, 0deg));
   font-family: "Amatic SC", cursive;
@@ -66,35 +84,61 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  transition: transform .25s cubic-bezier(.3, 1.6, .5, 1);
+  animation: wobble 1.6s ease-in-out infinite;
+  transition: text-shadow .3s ease, filter .3s ease;
 }
-.label:hover {
-  transform: translate(-50%, -50%) rotate(var(--r, 0deg)) scale(1.18);
+
+/* lắc lư mạnh quanh góc nghiêng gốc: nghiêng ±9°, nhún lên xuống */
+@keyframes wobble {
+  0%, 100% { transform: translate(-50%, -50%) rotate(calc(var(--r, 0deg) - 9deg)); }
+  25%      { transform: translate(-50%, calc(-50% - .35em)) rotate(var(--r, 0deg)); }
+  50%      { transform: translate(-50%, -50%) rotate(calc(var(--r, 0deg) + 9deg)); }
+  75%      { transform: translate(-50%, calc(-50% - .35em)) rotate(var(--r, 0deg)); }
+}
+
+/* hover / focus: đứng yên + phát sáng rực */
+.label:hover,
+.label:focus-visible {
+  animation: none;
+  transform: translate(-50%, -50%) rotate(var(--r, 0deg));
+  filter: brightness(1.25);
+  text-shadow:
+    0 0 4px #fff,
+    0 0 10px var(--glow),
+    0 0 22px var(--glow),
+    0 0 44px var(--glow),
+    0 0 72px var(--glow);
+  outline: none;
 }
 
 .label--about {
-  left: 11%; top: 32.5%; --r: -8deg;
+  left: 11%; top: 32.5%; --r: -8deg; animation-delay: 0s; --glow: #ff66c4;
   color: #FDFDB4; font-size: calc(3.67cqw * var(--k));   /* 52.837px */
 }
 .label--community {
-  left: 46.2%; top: 25.2%;
+  left: 46.2%; top: 25.2%; animation-delay: -.4s; --glow: #756fe4;
   color: #FFF; font-size: calc(3.82cqw * var(--k));      /* 54.985px */
 }
 .label--epilouge {
-  left: 69.3%; top: 23.5%; --r: 3deg;
+  left: 69.3%; top: 23.5%; --r: 3deg; animation-delay: -.8s; --glow: #a9a5ff;
   color: #756FE4; font-size: calc(2.76cqw * var(--k));   /* 39.69px */
 }
 .label--music {
-  left: 91.3%; top: 58%; --r: -6deg;
+  left: 91.3%; top: 58%; --r: -6deg; animation-delay: -1.2s; --glow: #ff8a2a;
   color: #FDFDB4; font-size: calc(2.76cqw * var(--k));
 }
 .label--academics {
-  left: 85.8%; top: 68%; --r: -14deg;
+  left: 85.8%; top: 68%; --r: -14deg; animation-delay: -.6s; --glow: #ffc04a;
   color: var(--orange); font-size: calc(2.76cqw * var(--k));
 }
 .label--gallery {
-  left: 16.9%; top: 81.5%; --r: 20deg;
-  color: #FDFDB4; font-size: calc(2.76cqw * var(--k));
+  left: 16.9%; top: 81.5%; --r: 20deg; animation-delay: -1.4s; --glow: #ff66c4;
+  color: #292C91; font-size: calc(2.76cqw * var(--k));
+}
+
+/* người dùng bật "giảm chuyển động" thì tắt lắc */
+@media (prefers-reduced-motion: reduce) {
+  .label { animation: none; }
 }
 
 /* ===== TOAST ===== */
@@ -116,7 +160,7 @@ body {
    tăng nhẹ cỡ chữ để không quá nhỏ trên màn hình bé.
    ===================================================== */
 
-/* ≤ 1439px — bắt đầu co giãn, cỡ chữ giữ nguyên tỉ lệ thiết kế */
+/* ≤ 1439px */
 @media (max-width: 1439px) {
   .scene { --k: 1; }
 }
@@ -130,8 +174,6 @@ body {
 /* ≤ 1024px */
 @media (max-width: 1024px) {
   .scene { --k: 1.15; }
-  .label:hover { transform: translate(-50%, -50%) rotate(var(--r, 0deg)); } /* tablet: bỏ hover */
-  .label:active { transform: translate(-50%, -50%) rotate(var(--r, 0deg)) scale(1.12); }
 }
 
 /* ≤ 768px */
@@ -147,6 +189,5 @@ body {
   .scene { --k: 1.35; --title: 9.8cqw; }
   .title--pink  { left: 10%; top: 6%; }
   .title--green { left: 24%; }
-  .label { text-shadow: 0 0 2px rgba(0, 0, 0, .15); }
   .toast { font-size: 20px; padding: 8px 16px; }
 }

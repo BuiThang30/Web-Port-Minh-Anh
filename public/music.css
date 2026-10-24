@@ -302,3 +302,17 @@ body {
   object-fit: cover;
   background-color: #fdfdb4;
 }
+
+/* ---------- Khung video YouTube (giữ nguyên vị trí + độ nghiêng của khung vàng) ---------- */
+.box-2 {
+  left: 8.889cqw;
+  top: 131.806cqw;
+  width: 63.681cqw;
+  height: 38.889cqw;
+  transform-origin: 0 0;
+  transform: rotate(-5.94deg);
+  border: 0;
+  padding: 0.7cqw;
+  background-color: #fdfdb4;
+  box-shadow: 0 0.278cqw 0.556cqw rgba(0, 0, 0, 0.25);
+}

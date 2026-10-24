@@ -108,6 +108,7 @@ body { background: #fefeb4; overflow-x: hidden; }
 .box-9 {
   left: 3.333cqw; top: 281.389cqw; width: 42.778cqw; height: 26.111cqw;
   transform-origin: 0 0; transform: rotate(-5.94deg); background-color: #fdfdb4;
+  border: 0; padding: 0.7cqw; box-shadow: 0 0.278cqw 0.556cqw rgba(0, 0, 0, 0.25);
 }
 
 /* ---------- Hình trang trí (đã nghiêng / lật sẵn, không xoay thêm) ---------- */

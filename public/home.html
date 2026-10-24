@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="is-locked">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,14 +11,14 @@
 </head>
 <body>
 
-  <!-- HERO: GIF đã có sẵn tên + bát + bánh trôi -->
-  <header class="hero" id="top">
+  <!-- HERO: GIF đã có sẵn tên + bát + bánh trôi (bấm vào để hiện phần dưới) -->
+  <header class="hero" id="top" role="button" tabindex="0" aria-controls="rabbit" aria-expanded="false" aria-label="Bấm để xem What's in my rabbit hole">
     <img src="images/home-background.gif" alt="Minh Ánh Pollio - floating rice cakes" />
   </header>
 
-  <!-- RABBIT HOLE: ảnh home.png + chữ đè lên đúng vị trí -->
-  <section class="scene" id="rabbit">
-    <img class="scene__bg" src="images/home.png" alt="" />
+  <!-- RABBIT HOLE: dựng sẵn nhưng ẩn + khóa cuộn, bấm vào GIF phía trên để hiện -->
+  <section class="scene" id="rabbit" aria-hidden="true">
+    <img class="scene__bg" src="images/home.webp" alt="" />
 
     <h2 class="title title--pink">WHAT’S<br />IN MY</h2>
     <h2 class="title title--green">RABBIT HOLE</h2>
