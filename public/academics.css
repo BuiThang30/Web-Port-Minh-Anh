@@ -108,8 +108,28 @@ body { background: #fefeb4; overflow-x: hidden; }
 .box-9 {
   left: 3.333cqw; top: 281.389cqw; width: 42.778cqw; height: 26.111cqw;
   transform-origin: 0 0; transform: rotate(-5.94deg); background-color: #fdfdb4;
-  border: 0; padding: 0.7cqw; box-shadow: 0 0.278cqw 0.556cqw rgba(0, 0, 0, 0.25);
+  padding: 0.7cqw; box-shadow: 0 0.278cqw 0.556cqw rgba(0, 0, 0, 0.25);
 }
+.box-9 > * { position: absolute; }
+.intern-video {
+  left: 0.7cqw; top: 0.7cqw;
+  width: calc(100% - 1.4cqw); height: calc(100% - 1.4cqw);
+  object-fit: cover; background: #000; cursor: pointer;
+}
+.video-controls {
+  left: 1.6cqw; bottom: 1.6cqw;
+  display: flex; gap: 0.8cqw;
+}
+.vc-btn {
+  width: max(4cqw, 28px); height: max(4cqw, 28px);
+  border: 0; border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55); color: #fff;
+  font-size: max(1.6cqw, 11px); line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background 0.15s, transform 0.15s;
+}
+.vc-btn:hover { background: rgba(0, 0, 0, 0.8); transform: scale(1.08); }
+.vc-btn:focus-visible { outline: 2px solid #ff6591; outline-offset: 2px; }
 
 /* ---------- Hình trang trí (đã nghiêng / lật sẵn, không xoay thêm) ---------- */
 .untitled-artwork-13-1 { left: 49.306cqw; top: 18.542cqw; width: 46.736cqw; height: 32.569cqw; object-fit: cover; }
